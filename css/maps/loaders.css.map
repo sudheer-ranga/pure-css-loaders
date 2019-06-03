@@ -1,0 +1,1 @@
+{"version":3,"file":"../loaders.css","sources":["loaders.scss","_line.scss","_circle.scss"],"sourcesContent":["@import \"line\";\n@import \"circle\";",".line {\n  width: 100%;\n  height: 2px;\n}",".circle {\n}"],"names":[],"mappings":"ACAA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG,GACZ"}
