@@ -1,5 +1,123 @@
+html,
+body,
+* {
+  box-sizing: border-box; }
+
+body {
+  background: black; }
+
+.spacer {
+  height: 50px; }
+
 .line {
   width: 100%;
-  height: 2px; }
+  height: 2px;
+  background-color: #eee;
+  position: relative; }
+  .line:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    background-color: #ff3366;
+    width: 75px;
+    animation: run 1s linear infinite; }
+  .line.inverse:after {
+    content: "";
+    animation: run .75s linear infinite alternate; }
+
+@keyframes run {
+  from {
+    left: 0; }
+  to {
+    left: calc(100% - 75px); } }
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #eee;
+  position: relative;
+  z-index: 1; }
+  .circle:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+    border-right-color: #ff3366;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotate .5s linear infinite; }
+  .circle.dual:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+    border-right-color: #ff3366;
+    border-left-color: transparent;
+    border-top-color: blue;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: rotate .5s linear infinite; }
+  .circle.triple:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+    border-right-color: #ff3366;
+    border-left-color: transparent;
+    border-top-color: blue;
+    border-bottom-color: orange;
+    border-radius: 50%;
+    animation: rotate .5s linear infinite; }
+  .circle.multiple:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+    border-right-color: #ff3366;
+    border-left-color: orange;
+    border-top-color: blue;
+    border-bottom-color: orchid;
+    border-radius: 50%;
+    animation: rotate .5s linear infinite; }
+  .circle.inverse:before {
+    content: "";
+    animation: rotate .5s linear infinite alternate !important; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center; }
+  to {
+    transform: rotate(360deg);
+    transform-origin: center; } }
 
 /*# sourceMappingURL=maps/loaders.css.map */

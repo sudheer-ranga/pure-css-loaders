@@ -1,2 +1,18 @@
+@import "variables";
+
+html,
+body,
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+.spacer {
+    height: 50px;
+}
+
 @import "line";
 @import "circle";
