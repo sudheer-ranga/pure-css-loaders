@@ -1,2 +1,24 @@
-@import "line";
-@import "circle";
+@import 'variables';
+
+html,
+body,
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.pure-loader {
+  @import 'line';
+  @import 'circle';
+  @import 'dots/dots';
+  @import 'loading-text';
+}
