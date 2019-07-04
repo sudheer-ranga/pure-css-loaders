@@ -2,7 +2,7 @@
   margin-left: 100px;
 }
 
-.dots {
+&.dots {
   background-color: orange;
   width: 15px;
   height: 15px;
@@ -33,7 +33,7 @@
     top: 0;
     left: 30px;
   }
-}
 
-@import 'dots-expand';
-@import 'dots-steps';
+  @import 'dots-expand';
+  @import 'dots-steps';
+}

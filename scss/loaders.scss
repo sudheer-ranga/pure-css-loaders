@@ -16,7 +16,9 @@ body {
   height: 50px;
 }
 
-@import 'line';
-@import 'circle';
-@import 'dots/dots';
-@import 'loading-text';
+.pure-loader {
+  @import 'line';
+  @import 'circle';
+  @import 'dots/dots';
+  @import 'loading-text';
+}

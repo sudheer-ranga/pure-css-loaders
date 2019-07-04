@@ -11,12 +11,12 @@ body {
 .spacer {
   height: 50px; }
 
-.line {
+.pure-loader.line {
   width: 100%;
   height: 2px;
   background-color: #eee;
   position: relative; }
-  .line:after {
+  .pure-loader.line:after {
     content: '';
     position: absolute;
     left: 0;
@@ -25,7 +25,7 @@ body {
     background-color: #ff3366;
     width: 75px;
     animation: run 1s linear infinite; }
-  .line.inverse:after {
+  .pure-loader.line.inverse:after {
     content: '';
     animation: run 0.75s linear infinite alternate; }
 
@@ -35,14 +35,14 @@ body {
   to {
     left: calc(100% - 75px); } }
 
-.circle {
+.pure-loader.circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 5px solid #eee;
   position: relative;
   z-index: 1; }
-  .circle:before {
+  .pure-loader.circle:before {
     content: '';
     width: 50px;
     height: 50px;
@@ -59,7 +59,7 @@ body {
     border-bottom-color: transparent;
     border-radius: 50%;
     animation: rotate 0.5s linear infinite; }
-  .circle.dual:before {
+  .pure-loader.circle.dual:before {
     content: '';
     width: 50px;
     height: 50px;
@@ -76,7 +76,7 @@ body {
     border-bottom-color: transparent;
     border-radius: 50%;
     animation: rotate 0.5s linear infinite; }
-  .circle.triple:before {
+  .pure-loader.circle.triple:before {
     content: '';
     width: 50px;
     height: 50px;
@@ -93,7 +93,7 @@ body {
     border-bottom-color: orange;
     border-radius: 50%;
     animation: rotate 0.5s linear infinite; }
-  .circle.multiple:before {
+  .pure-loader.circle.multiple:before {
     content: '';
     width: 50px;
     height: 50px;
@@ -110,7 +110,7 @@ body {
     border-bottom-color: orchid;
     border-radius: 50%;
     animation: rotate 0.5s linear infinite; }
-  .circle.inverse:before {
+  .pure-loader.circle.inverse:before {
     content: '';
     animation: rotate 0.5s linear infinite alternate !important; }
 
@@ -122,17 +122,17 @@ body {
     transform: rotate(360deg);
     transform-origin: center; } }
 
-.dots {
+.pure-loader .dots {
   margin-left: 100px; }
 
-.dots {
+.pure-loader.dots {
   background-color: orange;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   position: relative;
   display: inline-block; }
-  .dots:before {
+  .pure-loader.dots:before {
     content: '';
     width: 15px;
     height: 15px;
@@ -142,7 +142,7 @@ body {
     position: absolute;
     top: 0;
     left: -30px; }
-  .dots:after {
+  .pure-loader.dots:after {
     content: '';
     width: 15px;
     height: 15px;
@@ -152,29 +152,27 @@ body {
     position: absolute;
     top: 0;
     left: 30px; }
-
-.dots {
-  animation: dotsExpand 1s infinite alternate; }
+  .pure-loader.dots.expand {
+    animation: dotsExpand 1s infinite alternate; }
 
 @keyframes dotsExpand {
   0% {
     transform: scale(0); }
   100% {
     transform: scale(1); } }
-
-.dots.steps {
-  animation: dotsSteps 0.9s linear infinite alternate;
-  animation-delay: -0.6s; }
-  .dots.steps::before {
-    content: '';
-    animation: dotsSteps 0.9s infinite alternate;
-    animation-delay: -0.9s; }
-  .dots.steps::after {
-    content: '';
-    animation: dotsSteps 0.9s infinite alternate;
-    animation-delay: -0.3s; }
-  .dots.steps.angle::before, .dots.steps.angle::after {
-    top: 25px; }
+  .pure-loader.dots.steps {
+    animation: dotsSteps 0.9s linear infinite alternate;
+    animation-delay: -0.6s; }
+    .pure-loader.dots.steps::before {
+      content: '';
+      animation: dotsSteps 0.9s infinite alternate;
+      animation-delay: -0.9s; }
+    .pure-loader.dots.steps::after {
+      content: '';
+      animation: dotsSteps 0.9s infinite alternate;
+      animation-delay: -0.3s; }
+    .pure-loader.dots.steps.angle::before, .pure-loader.dots.steps.angle::after {
+      top: 25px; }
 
 @keyframes dotsSteps {
   0% {
@@ -182,14 +180,14 @@ body {
   100% {
     opacity: 1; } }
 
-.loading-text {
+.pure-loader.loading-text {
   color: #fff;
   text-transform: uppercase;
   font-family: Lato;
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 1; }
-  .loading-text:after {
+  .pure-loader.loading-text:after {
     animation: changeText 3s linear infinite alternate;
     display: block;
     content: 'loading...'; }

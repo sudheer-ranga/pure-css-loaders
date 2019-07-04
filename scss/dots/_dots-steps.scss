@@ -1,25 +1,23 @@
-.dots {
-  &.steps {
-    animation: dotsSteps 0.9s linear infinite alternate;
-    animation-delay: -0.6s;
+&.steps {
+  animation: dotsSteps 0.9s linear infinite alternate;
+  animation-delay: -0.6s;
 
-    &::before {
-      content: '';
-      animation: dotsSteps 0.9s infinite alternate;
-      animation-delay: -0.9s;
-    }
+  &::before {
+    content: '';
+    animation: dotsSteps 0.9s infinite alternate;
+    animation-delay: -0.9s;
+  }
 
+  &::after {
+    content: '';
+    animation: dotsSteps 0.9s infinite alternate;
+    animation-delay: -0.3s;
+  }
+
+  &.angle {
+    &::before,
     &::after {
-      content: '';
-      animation: dotsSteps 0.9s infinite alternate;
-      animation-delay: -0.3s;
-    }
-
-    &.angle {
-      &::before,
-      &::after {
-        top: 25px;
-      }
+      top: 25px;
     }
   }
 }
