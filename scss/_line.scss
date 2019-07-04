@@ -6,7 +6,7 @@
   position: relative;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -17,18 +17,17 @@
   }
 
   &.inverse {
-
     &:after {
-      content: "";
-      animation: run .75s linear infinite alternate;
+      content: '';
+      animation: run 0.75s linear infinite alternate;
     }
   }
-  
+
   @keyframes run {
     from {
       left: 0;
     }
-    
+
     to {
       left: calc(100% - 75px);
     }
@@ -42,7 +41,7 @@
   //   50% {
   //     left: calc(100% - 75px);
   //   }
-    
+
   //   100% {
   //     left: 0%;
   //   }

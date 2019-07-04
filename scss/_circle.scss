@@ -1,109 +1,109 @@
 .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid $loader-background-color;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
     width: 50px;
     height: 50px;
+    border-width: 5px;
+    border-style: solid;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+    border-right-color: $loader-active-color;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
     border-radius: 50%;
-    border: 5px solid $loader-background-color;
-    position: relative;
-    z-index: 1;
+    animation: rotate 0.5s linear infinite;
+  }
 
+  &.dual {
     &:before {
-        content: "";
-        width: 50px;
-        height: 50px;
-        border-width: 5px;
-        border-style: solid;
-        position: absolute;
-        display: inline-block;
-        box-sizing: border-box;
-        left: -5px;
-        top: -5px;
-        border-right-color: $loader-active-color;
-        border-left-color: transparent;
-        border-top-color: transparent;
-        border-bottom-color: transparent;
-        border-radius: 50%;
-        animation: rotate .5s linear infinite;
+      content: '';
+      width: 50px;
+      height: 50px;
+      border-width: 5px;
+      border-style: solid;
+      position: absolute;
+      display: inline-block;
+      box-sizing: border-box;
+      left: -5px;
+      top: -5px;
+      border-right-color: $loader-active-color;
+      border-left-color: transparent;
+      border-top-color: blue;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      animation: rotate 0.5s linear infinite;
+    }
+  }
+
+  &.triple {
+    &:before {
+      content: '';
+      width: 50px;
+      height: 50px;
+      border-width: 5px;
+      border-style: solid;
+      position: absolute;
+      display: inline-block;
+      box-sizing: border-box;
+      left: -5px;
+      top: -5px;
+      border-right-color: $loader-active-color;
+      border-left-color: transparent;
+      border-top-color: blue;
+      border-bottom-color: orange;
+      border-radius: 50%;
+      animation: rotate 0.5s linear infinite;
+    }
+  }
+
+  &.multiple {
+    &:before {
+      content: '';
+      width: 50px;
+      height: 50px;
+      border-width: 5px;
+      border-style: solid;
+      position: absolute;
+      display: inline-block;
+      box-sizing: border-box;
+      left: -5px;
+      top: -5px;
+      border-right-color: $loader-active-color;
+      border-left-color: orange;
+      border-top-color: blue;
+      border-bottom-color: orchid;
+      border-radius: 50%;
+      animation: rotate 0.5s linear infinite;
+    }
+  }
+
+  &.inverse {
+    &:before {
+      content: '';
+      animation: rotate 0.5s linear infinite alternate !important;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+      transform-origin: center;
     }
 
-    &.dual {
-        &:before {
-            content: "";
-            width: 50px;
-            height: 50px;
-            border-width: 5px;
-            border-style: solid;
-            position: absolute;
-            display: inline-block;
-            box-sizing: border-box;
-            left: -5px;
-            top: -5px;
-            border-right-color: $loader-active-color;
-            border-left-color: transparent;
-            border-top-color: blue;
-            border-bottom-color: transparent;
-            border-radius: 50%;
-            animation: rotate .5s linear infinite;
-        }
+    to {
+      transform: rotate(360deg);
+      transform-origin: center;
     }
-
-    &.triple {
-        &:before {
-            content: "";
-            width: 50px;
-            height: 50px;
-            border-width: 5px;
-            border-style: solid;
-            position: absolute;
-            display: inline-block;
-            box-sizing: border-box;
-            left: -5px;
-            top: -5px;
-            border-right-color: $loader-active-color;
-            border-left-color: transparent;
-            border-top-color: blue;
-            border-bottom-color: orange;
-            border-radius: 50%;
-            animation: rotate .5s linear infinite;
-        }
-    }
-
-    &.multiple {
-        &:before {
-            content: "";
-            width: 50px;
-            height: 50px;
-            border-width: 5px;
-            border-style: solid;
-            position: absolute;
-            display: inline-block;
-            box-sizing: border-box;
-            left: -5px;
-            top: -5px;
-            border-right-color: $loader-active-color;
-            border-left-color: orange;
-            border-top-color: blue;
-            border-bottom-color: orchid;
-            border-radius: 50%;
-            animation: rotate .5s linear infinite;
-        }
-    }
-
-    &.inverse {
-        &:before {
-            content: "";
-            animation: rotate .5s linear infinite alternate !important;
-        }
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-            transform-origin: center;
-        }
-
-        to {
-            transform: rotate(360deg);
-            transform-origin: center;
-        }
-    }
+  }
 }

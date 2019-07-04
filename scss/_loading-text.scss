@@ -1,0 +1,28 @@
+$white: #fff;
+
+.loading-text {
+  color: $white;
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1;
+
+  &:after {
+    animation: changeText 3s linear infinite alternate;
+    display: block;
+    content: 'loading...';
+  }
+}
+
+@keyframes changeText {
+  0% {
+    content: 'loading...';
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    content: 'please wait...';
+  }
+}

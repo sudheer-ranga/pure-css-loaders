@@ -1,6 +1,8 @@
 html,
 body,
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
 body {
@@ -15,7 +17,7 @@ body {
   background-color: #eee;
   position: relative; }
   .line:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -24,8 +26,8 @@ body {
     width: 75px;
     animation: run 1s linear infinite; }
   .line.inverse:after {
-    content: "";
-    animation: run .75s linear infinite alternate; }
+    content: '';
+    animation: run 0.75s linear infinite alternate; }
 
 @keyframes run {
   from {
@@ -41,7 +43,7 @@ body {
   position: relative;
   z-index: 1; }
   .circle:before {
-    content: "";
+    content: '';
     width: 50px;
     height: 50px;
     border-width: 5px;
@@ -56,9 +58,9 @@ body {
     border-top-color: transparent;
     border-bottom-color: transparent;
     border-radius: 50%;
-    animation: rotate .5s linear infinite; }
+    animation: rotate 0.5s linear infinite; }
   .circle.dual:before {
-    content: "";
+    content: '';
     width: 50px;
     height: 50px;
     border-width: 5px;
@@ -73,9 +75,9 @@ body {
     border-top-color: blue;
     border-bottom-color: transparent;
     border-radius: 50%;
-    animation: rotate .5s linear infinite; }
+    animation: rotate 0.5s linear infinite; }
   .circle.triple:before {
-    content: "";
+    content: '';
     width: 50px;
     height: 50px;
     border-width: 5px;
@@ -90,9 +92,9 @@ body {
     border-top-color: blue;
     border-bottom-color: orange;
     border-radius: 50%;
-    animation: rotate .5s linear infinite; }
+    animation: rotate 0.5s linear infinite; }
   .circle.multiple:before {
-    content: "";
+    content: '';
     width: 50px;
     height: 50px;
     border-width: 5px;
@@ -107,10 +109,10 @@ body {
     border-top-color: blue;
     border-bottom-color: orchid;
     border-radius: 50%;
-    animation: rotate .5s linear infinite; }
+    animation: rotate 0.5s linear infinite; }
   .circle.inverse:before {
-    content: "";
-    animation: rotate .5s linear infinite alternate !important; }
+    content: '';
+    animation: rotate 0.5s linear infinite alternate !important; }
 
 @keyframes rotate {
   from {
@@ -119,5 +121,85 @@ body {
   to {
     transform: rotate(360deg);
     transform-origin: center; } }
+
+.dots {
+  margin-left: 100px; }
+
+.dots {
+  background-color: orange;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block; }
+  .dots:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -30px; }
+  .dots:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 30px; }
+
+.dots {
+  animation: dotsExpand 1s infinite alternate; }
+
+@keyframes dotsExpand {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+.dots.steps {
+  animation: dotsSteps 0.9s linear infinite alternate;
+  animation-delay: -0.6s; }
+  .dots.steps::before {
+    content: '';
+    animation: dotsSteps 0.9s infinite alternate;
+    animation-delay: -0.9s; }
+  .dots.steps::after {
+    content: '';
+    animation: dotsSteps 0.9s infinite alternate;
+    animation-delay: -0.3s; }
+  .dots.steps.angle::before, .dots.steps.angle::after {
+    top: 25px; }
+
+@keyframes dotsSteps {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.loading-text {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1; }
+  .loading-text:after {
+    animation: changeText 3s linear infinite alternate;
+    display: block;
+    content: 'loading...'; }
+
+@keyframes changeText {
+  0% {
+    content: 'loading...'; }
+  50% {
+    color: transparent; }
+  100% {
+    content: 'please wait...'; } }
 
 /*# sourceMappingURL=maps/loaders.css.map */

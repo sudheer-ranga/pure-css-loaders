@@ -1,0 +1,39 @@
+.dots {
+  margin-left: 100px;
+}
+
+.dots {
+  background-color: orange;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -30px;
+  }
+
+  &:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 30px;
+  }
+}
+
+@import 'dots-expand';
+@import 'dots-steps';

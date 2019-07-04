@@ -1,18 +1,22 @@
-@import "variables";
+@import 'variables';
 
 html,
 body,
-* {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
-    background: black;
+  background: black;
 }
 
 .spacer {
-    height: 50px;
+  height: 50px;
 }
 
-@import "line";
-@import "circle";
+@import 'line';
+@import 'circle';
+@import 'dots/dots';
+@import 'loading-text';
