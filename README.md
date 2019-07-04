@@ -1,4 +1,4 @@
-#Pure CSS Loaders
+# Pure CSS Loaders
 
 1. Pure css loaders are made with css3 animations
 2. Uses only 1 single div
@@ -6,6 +6,8 @@
 4. fully customizable
 
 > Note: This is still in beta and is being developed.
+
+![](gifs/loaders.gif)
 
 How to use?
 
